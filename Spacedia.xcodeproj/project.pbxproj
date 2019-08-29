@@ -54,14 +54,62 @@
 		3848C8F42317CF8F00E4321F /* Spacedia */ = {
 			isa = PBXGroup;
 			children = (
-				3848C8F52317CF8F00E4321F /* AppDelegate.swift */,
-				3848C8F72317CF8F00E4321F /* ViewController.swift */,
-				3848C8F92317CF8F00E4321F /* Main.storyboard */,
-				3848C8FC2317CF9100E4321F /* Assets.xcassets */,
-				3848C8FE2317CF9100E4321F /* LaunchScreen.storyboard */,
-				3848C9012317CF9100E4321F /* Info.plist */,
+				9FAE86F92317DC10007B6501 /* Model */,
+				9FAE86F82317DC0D007B6501 /* View */,
+				9FAE86F72317DC0A007B6501 /* Controller */,
+				9FAE86F62317DC06007B6501 /* Storyboard */,
+				9FAE86F52317DC04007B6501 /* Supporting File */,
+				9FAE86F42317DC01007B6501 /* Resources */,
 			);
 			path = Spacedia;
+			sourceTree = "<group>";
+		};
+		9FAE86F42317DC01007B6501 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3848C8FC2317CF9100E4321F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FAE86F52317DC04007B6501 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				3848C8F52317CF8F00E4321F /* AppDelegate.swift */,
+				3848C9012317CF9100E4321F /* Info.plist */,
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
+		9FAE86F62317DC06007B6501 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3848C8F92317CF8F00E4321F /* Main.storyboard */,
+				3848C8FE2317CF9100E4321F /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9FAE86F72317DC0A007B6501 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9FAE86F82317DC0D007B6501 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3848C8F72317CF8F00E4321F /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9FAE86F92317DC10007B6501 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +331,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FYQM88ABPG;
-				INFOPLIST_FILE = Spacedia/Info.plist;
+				DEVELOPMENT_TEAM = UPE3S28QP6;
+				INFOPLIST_FILE = "$(SRCROOT)/Spacedia/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,8 +349,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FYQM88ABPG;
-				INFOPLIST_FILE = Spacedia/Info.plist;
+				DEVELOPMENT_TEAM = UPE3S28QP6;
+				INFOPLIST_FILE = "$(SRCROOT)/Spacedia/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
