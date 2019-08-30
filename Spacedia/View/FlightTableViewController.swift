@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FlightUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class LaunchesUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var filterDateView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -36,11 +36,6 @@ class FlightUIViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func hideFilterDateViewButton(_ sender: Any) {
-    self.viewForHideFilterDateView.isHidden = !(self.viewForHideFilterDateView.isHidden)
-        showAndHideFilterDateView()
-    }
-    
-    @IBAction func btn(_ sender: Any) {
         showAndHideFilterDateView()
     }
     
@@ -49,10 +44,14 @@ class FlightUIViewController: UIViewController, UITableViewDelegate, UITableView
         UIView.animate(withDuration: 0.3, animations: {
             if self.filterDateView.frame.origin.y == self.view.frame.height {
                 self.filterDateView.frame.origin.y -= self.filterDateView.frame.height + self.bottomSafeArea
-                self.viewForHideFilterDateView.isHidden = !self.viewForHideFilterDateView.isHidden
+                
+                self.viewForHideFilterDateView.isHidden = !(self.viewForHideFilterDateView.isHidden)
+                self.viewForHideFilterDateView.alpha = self.viewForHideFilterDateView.alpha == 0 ? 0.5 : 0
             } else {
                 self.filterDateView.frame.origin.y += self.filterDateView.frame.height + self.bottomSafeArea
                 
+                self.viewForHideFilterDateView.isHidden = !(self.viewForHideFilterDateView.isHidden)
+                self.viewForHideFilterDateView.alpha = self.viewForHideFilterDateView.alpha == 0 ? 0.5 : 0
             }
             
         })

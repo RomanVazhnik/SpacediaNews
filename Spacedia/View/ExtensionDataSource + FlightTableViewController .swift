@@ -9,7 +9,7 @@
 import UIKit
 
 //DataSourceProtocol
-extension FlightUIViewController {
+extension LaunchesUIViewController {
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return flights.count

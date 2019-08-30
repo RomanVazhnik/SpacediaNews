@@ -13,7 +13,7 @@
         <!--Launches-->
         <scene sceneID="WXt-nA-MVQ">
             <objects>
-                <viewController id="1tu-aY-g5X" customClass="FlightUIViewController" customModule="Spacedia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1tu-aY-g5X" customClass="LaunchesUIViewController" customModule="Spacedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N88-un-HNJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +89,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="flightDate" destination="lCc-bZ-jRi" id="f4J-Qd-A2E"/>
+                                            <outlet property="flightImage" destination="xS7-lu-g7w" id="Xt0-pJ-rls"/>
                                             <outlet property="flightNumber" destination="OBx-1k-njh" id="aw5-Ui-Lzw"/>
                                             <outlet property="missionName" destination="Ikj-TD-AtO" id="Pfr-1g-E35"/>
                                             <segue destination="ynt-NF-SNv" kind="show" id="LyW-vT-nnz"/>
@@ -100,6 +101,24 @@
                                     <outlet property="delegate" destination="1tu-aY-g5X" id="x0b-Np-VGr"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J1-xb-xxW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBb-dz-bkK">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <connections>
+                                            <action selector="hideFilterDateViewButton:" destination="1tu-aY-g5X" eventType="touchUpInside" id="26y-Cw-UFq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DBb-dz-bkK" secondAttribute="trailing" id="EOm-QB-LKT"/>
+                                    <constraint firstAttribute="bottom" secondItem="DBb-dz-bkK" secondAttribute="bottom" id="HGk-f1-jtC"/>
+                                    <constraint firstItem="DBb-dz-bkK" firstAttribute="top" secondItem="5J1-xb-xxW" secondAttribute="top" id="S7H-5P-jhW"/>
+                                    <constraint firstItem="DBb-dz-bkK" firstAttribute="leading" secondItem="5J1-xb-xxW" secondAttribute="leading" id="fVj-3M-9KL"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iK-EM-wPX">
                                 <rect key="frame" x="10" y="896" width="394" height="150"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,44 +131,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J1-xb-xxW">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBb-dz-bkK">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
-                                        <connections>
-                                            <action selector="hideFilterDateViewButton:" destination="1tu-aY-g5X" eventType="touchUpInside" id="deo-6r-neN"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="DBb-dz-bkK" secondAttribute="trailing" id="EOm-QB-LKT"/>
-                                    <constraint firstAttribute="bottom" secondItem="DBb-dz-bkK" secondAttribute="bottom" id="HGk-f1-jtC"/>
-                                    <constraint firstItem="DBb-dz-bkK" firstAttribute="top" secondItem="5J1-xb-xxW" secondAttribute="top" id="S7H-5P-jhW"/>
-                                    <constraint firstItem="DBb-dz-bkK" firstAttribute="leading" secondItem="5J1-xb-xxW" secondAttribute="leading" id="fVj-3M-9KL"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="3iK-EM-wPX" secondAttribute="bottom" constant="-150" id="53x-1F-dGY"/>
                             <constraint firstItem="5J1-xb-xxW" firstAttribute="leading" secondItem="YMt-6V-bjp" secondAttribute="leading" id="6OO-93-z8Y"/>
-                            <constraint firstItem="5J1-xb-xxW" firstAttribute="top" secondItem="YMt-6V-bjp" secondAttribute="top" id="JIz-N7-5xY"/>
+                            <constraint firstItem="5J1-xb-xxW" firstAttribute="top" secondItem="N88-un-HNJ" secondAttribute="top" id="JIz-N7-5xY"/>
                             <constraint firstItem="YMt-6V-bjp" firstAttribute="trailing" secondItem="wfa-OD-BGh" secondAttribute="trailing" id="RZZ-Md-zE2"/>
                             <constraint firstItem="YMt-6V-bjp" firstAttribute="trailing" secondItem="3iK-EM-wPX" secondAttribute="trailing" constant="10" id="ZKz-To-hDY"/>
                             <constraint firstItem="3iK-EM-wPX" firstAttribute="leading" secondItem="YMt-6V-bjp" secondAttribute="leading" constant="10" id="cLD-VU-D0v"/>
-                            <constraint firstItem="5J1-xb-xxW" firstAttribute="trailing" secondItem="YMt-6V-bjp" secondAttribute="trailing" id="iCV-qg-iFq"/>
+                            <constraint firstItem="5J1-xb-xxW" firstAttribute="trailing" secondItem="N88-un-HNJ" secondAttribute="trailing" id="iCV-qg-iFq"/>
                             <constraint firstItem="wfa-OD-BGh" firstAttribute="leading" secondItem="YMt-6V-bjp" secondAttribute="leading" id="mQC-vs-k8D"/>
-                            <constraint firstItem="YMt-6V-bjp" firstAttribute="bottom" secondItem="5J1-xb-xxW" secondAttribute="bottom" id="qeO-8K-uI4"/>
+                            <constraint firstAttribute="bottom" secondItem="5J1-xb-xxW" secondAttribute="bottom" id="qeO-8K-uI4"/>
                             <constraint firstItem="wfa-OD-BGh" firstAttribute="top" secondItem="YMt-6V-bjp" secondAttribute="top" id="xgv-XU-3uW"/>
                             <constraint firstItem="YMt-6V-bjp" firstAttribute="bottom" secondItem="wfa-OD-BGh" secondAttribute="bottom" id="xs1-Mz-70q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YMt-6V-bjp"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="5J1-xb-xxW"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Launches" id="0pe-Mz-q2H">
                         <barButtonItem key="rightBarButtonItem" id="aJ4-j6-g9d">
@@ -158,9 +155,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="date"/>
                                 <connections>
-                                    <action selector="btn:" destination="1tu-aY-g5X" eventType="touchUpInside" id="rlB-AC-OFG"/>
+                                    <action selector="hideFilterDateViewButton:" destination="1tu-aY-g5X" eventType="touchUpInside" id="cJ7-1o-5gK"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <action selector="hideFilterDateViewButton:" destination="1tu-aY-g5X" id="8q3-LY-Fir"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="842.02898550724649" y="-52.232142857142854"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--LaunchesDetail-->
         <scene sceneID="Se7-OV-Sw5">
             <objects>
-                <viewControllerPlaceholder id="ynt-NF-SNv" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="LaunchesDetail" id="ynt-NF-SNv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evj-g4-kuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1548" y="-53"/>
