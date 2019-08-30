@@ -10,6 +10,7 @@ import UIKit
 
 class FlightUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableView: UITableView!
     var flights: [Flight] = []
     
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class FlightUIViewController: UIViewController, UITableViewDelegate, UITableView
         NetworkManager.fetchData(for: "https://api.spacexdata.com/v3/launches/") { (flights) in
             if let flights = flights {
                 self.flights = flights
+                self.tableView.reloadData()
             }
         }
     }
