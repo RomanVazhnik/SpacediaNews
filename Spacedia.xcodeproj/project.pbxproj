@@ -15,6 +15,7 @@
 		F64062FC231932A300070B0E /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FB231932A300070B0E /* Flight.swift */; };
 		F64062FE2319339400070B0E /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FD2319339400070B0E /* Rocket.swift */; };
 		F64063002319346D00070B0E /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FF2319346D00070B0E /* Links.swift */; };
+		F640630223193C6200070B0E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640630123193C6200070B0E /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F64062FB231932A300070B0E /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		F64062FD2319339400070B0E /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		F64062FF2319346D00070B0E /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		F640630123193C6200070B0E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9FAE86F62317DC06007B6501 /* Storyboard */,
 				9FAE86F52317DC04007B6501 /* Supporting File */,
 				9FAE86F42317DC01007B6501 /* Resources */,
+				F640630123193C6200070B0E /* NetworkingManager.swift */,
 			);
 			path = Spacedia;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				F64063002319346D00070B0E /* Links.swift in Sources */,
 				F64062FC231932A300070B0E /* Flight.swift in Sources */,
 				3848C8F82317CF8F00E4321F /* LaunchesViewController.swift in Sources */,
+				F640630223193C6200070B0E /* NetworkingManager.swift in Sources */,
 				3848C8F62317CF8F00E4321F /* AppDelegate.swift in Sources */,
 				F64062FE2319339400070B0E /* Rocket.swift in Sources */,
 			);

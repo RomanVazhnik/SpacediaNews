@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Links {
-    let missionPatch: String
-    let missionPatchSmall: String
-    let wikipedia: String
+struct Links: Codable {
+    let missionPatch: String?
+    let missionPatchSmall: String?
+    let wikipedia: String?
 }
 
 // missionPatch для отображение на подробном экране, а missionPatchSmall для
