@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Flight {
-    let flightNumber: Int
-    let missionName: String
-    let launchDateUnix: Int
-    let rocketId: Rocket
-    let links: Links
-    let details: String
+struct Flight: Codable {
+    let flightNumber: Int?
+    let missionName: String?
+    let launchDateUnix: Int?
+    let rocket: Rocket?
+    let links: Links?
+    let details: String?
 }

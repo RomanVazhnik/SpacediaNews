@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Rocket {
-    let rocketName: String
-    let rocketType: String
+struct Rocket: Codable {
+    let rocketName: String?
+    let rocketType: String?
 }
