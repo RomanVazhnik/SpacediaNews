@@ -36,4 +36,22 @@ class NetworkingManager {
         }.resume()
     }
     
+    static func fetchImage(for url: String, complition: @escaping (UIImage?)->()){
+        
+        guard let url = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, respons, error) in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let data = data, let image = UIImage(data: data) else { return }
+            
+            DispatchQueue.main.async {
+                complition(image)
+            }
+        }.resume()
+    }
+    
 }
