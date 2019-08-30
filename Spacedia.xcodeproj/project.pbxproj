@@ -10,6 +10,7 @@
 		3848C8F62317CF8F00E4321F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C8F52317CF8F00E4321F /* AppDelegate.swift */; };
 		3848C8FD2317CF9100E4321F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3848C8FC2317CF9100E4321F /* Assets.xcassets */; };
 		3848C9002317CF9100E4321F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3848C8FE2317CF9100E4321F /* LaunchScreen.storyboard */; };
+		9F655FFF23196663002C9270 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F655FFE23196663002C9270 /* ImageView.swift */; };
 		9FAE870123195BAE007B6501 /* Flights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAE870023195BAD007B6501 /* Flights.storyboard */; };
 		9FAE870323195CB3007B6501 /* FlightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE870223195CB3007B6501 /* FlightTableViewController.swift */; };
 		9FAE870523195CE7007B6501 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE870423195CE7007B6501 /* FlightCell.swift */; };
@@ -26,6 +27,7 @@
 		3848C8FC2317CF9100E4321F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3848C8FF2317CF9100E4321F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3848C9012317CF9100E4321F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F655FFE23196663002C9270 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		9FAE870023195BAD007B6501 /* Flights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flights.storyboard; sourceTree = "<group>"; };
 		9FAE870223195CB3007B6501 /* FlightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewController.swift; sourceTree = "<group>"; };
 		9FAE870423195CE7007B6501 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlightCell.swift; path = Spacedia/View/FlightCell.swift; sourceTree = SOURCE_ROOT; };
@@ -90,6 +92,7 @@
 			children = (
 				3848C8F52317CF8F00E4321F /* AppDelegate.swift */,
 				3848C9012317CF9100E4321F /* Info.plist */,
+				9F655FFE23196663002C9270 /* ImageView.swift */,
 			);
 			path = "Supporting File";
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F655FFF23196663002C9270 /* ImageView.swift in Sources */,
 				F64063002319346D00070B0E /* Links.swift in Sources */,
 				F64062FC231932A300070B0E /* Flight.swift in Sources */,
 				9FAE870523195CE7007B6501 /* FlightCell.swift in Sources */,
