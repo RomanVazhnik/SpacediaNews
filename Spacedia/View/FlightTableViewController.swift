@@ -8,13 +8,14 @@
 
 import UIKit
 
-class FlightTableViewController: UITableViewController {
+class FlightUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var flights: [Flight] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkingManager.fetchData(for: "https://api.spacexdata.com/v3/launches/") { (flights) in
+                
+        NetworkManager.fetchData(for: "https://api.spacexdata.com/v3/launches/") { (flights) in
             if let flights = flights {
                 self.flights = flights
             }

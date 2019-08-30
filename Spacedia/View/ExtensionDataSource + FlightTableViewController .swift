@@ -9,18 +9,18 @@
 import UIKit
 
 //DataSourceProtocol
-extension FlightTableViewController {
+extension FlightUIViewController {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return flights.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as! FlightCell
         
         let flight = flights[indexPath.row]
         cell.configure(with: flight)
-        
+
         return cell
     }
     

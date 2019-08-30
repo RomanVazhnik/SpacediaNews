@@ -11,13 +11,13 @@
 		3848C8FD2317CF9100E4321F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3848C8FC2317CF9100E4321F /* Assets.xcassets */; };
 		3848C9002317CF9100E4321F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3848C8FE2317CF9100E4321F /* LaunchScreen.storyboard */; };
 		9F655FFF23196663002C9270 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F655FFE23196663002C9270 /* ImageView.swift */; };
-		9FAE870123195BAE007B6501 /* Flights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAE870023195BAD007B6501 /* Flights.storyboard */; };
+		9FAE870123195BAE007B6501 /* Launches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAE870023195BAD007B6501 /* Launches.storyboard */; };
 		9FAE870323195CB3007B6501 /* FlightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE870223195CB3007B6501 /* FlightTableViewController.swift */; };
 		9FAE870523195CE7007B6501 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE870423195CE7007B6501 /* FlightCell.swift */; };
 		F64062FC231932A300070B0E /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FB231932A300070B0E /* Flight.swift */; };
 		F64062FE2319339400070B0E /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FD2319339400070B0E /* Rocket.swift */; };
 		F64063002319346D00070B0E /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FF2319346D00070B0E /* Links.swift */; };
-		F640630223193C6200070B0E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640630123193C6200070B0E /* NetworkingManager.swift */; };
+		F640630223193C6200070B0E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640630123193C6200070B0E /* NetworkManager.swift */; };
 		F6406306231965FD00070B0E /* ExtensionDataSource + FlightTableViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = F6406305231965FD00070B0E /* ExtensionDataSource + FlightTableViewController .swift */; };
 /* End PBXBuildFile section */
 
@@ -28,13 +28,13 @@
 		3848C8FF2317CF9100E4321F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3848C9012317CF9100E4321F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F655FFE23196663002C9270 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
-		9FAE870023195BAD007B6501 /* Flights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flights.storyboard; sourceTree = "<group>"; };
+		9FAE870023195BAD007B6501 /* Launches.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launches.storyboard; sourceTree = "<group>"; };
 		9FAE870223195CB3007B6501 /* FlightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewController.swift; sourceTree = "<group>"; };
 		9FAE870423195CE7007B6501 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlightCell.swift; path = Spacedia/View/FlightCell.swift; sourceTree = SOURCE_ROOT; };
 		F64062FB231932A300070B0E /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		F64062FD2319339400070B0E /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		F64062FF2319346D00070B0E /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
-		F640630123193C6200070B0E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		F640630123193C6200070B0E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F6406305231965FD00070B0E /* ExtensionDataSource + FlightTableViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionDataSource + FlightTableViewController .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +74,7 @@
 				9FAE86F62317DC06007B6501 /* Storyboard */,
 				9FAE86F52317DC04007B6501 /* Supporting File */,
 				9FAE86F42317DC01007B6501 /* Resources */,
-				F640630123193C6200070B0E /* NetworkingManager.swift */,
+				F640630123193C6200070B0E /* NetworkManager.swift */,
 			);
 			path = Spacedia;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 		9FAE86F62317DC06007B6501 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				9FAE870023195BAD007B6501 /* Flights.storyboard */,
+				9FAE870023195BAD007B6501 /* Launches.storyboard */,
 				3848C8FE2317CF9100E4321F /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -193,7 +193,7 @@
 			files = (
 				3848C9002317CF9100E4321F /* LaunchScreen.storyboard in Resources */,
 				3848C8FD2317CF9100E4321F /* Assets.xcassets in Resources */,
-				9FAE870123195BAE007B6501 /* Flights.storyboard in Resources */,
+				9FAE870123195BAE007B6501 /* Launches.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +208,7 @@
 				F64063002319346D00070B0E /* Links.swift in Sources */,
 				F64062FC231932A300070B0E /* Flight.swift in Sources */,
 				9FAE870523195CE7007B6501 /* FlightCell.swift in Sources */,
-				F640630223193C6200070B0E /* NetworkingManager.swift in Sources */,
+				F640630223193C6200070B0E /* NetworkManager.swift in Sources */,
 				F6406306231965FD00070B0E /* ExtensionDataSource + FlightTableViewController .swift in Sources */,
 				9FAE870323195CB3007B6501 /* FlightTableViewController.swift in Sources */,
 				3848C8F62317CF8F00E4321F /* AppDelegate.swift in Sources */,

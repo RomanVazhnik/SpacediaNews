@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NetworkingManager {
+class NetworkManager {
     
     static func fetchData(for url: String, complition: @escaping ([Flight]?) -> ()) {
         
