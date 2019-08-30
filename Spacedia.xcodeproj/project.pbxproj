@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3848C8F62317CF8F00E4321F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C8F52317CF8F00E4321F /* AppDelegate.swift */; };
-		3848C8F82317CF8F00E4321F /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3848C8F72317CF8F00E4321F /* LaunchesViewController.swift */; };
-		3848C8FB2317CF8F00E4321F /* Launches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3848C8F92317CF8F00E4321F /* Launches.storyboard */; };
 		3848C8FD2317CF9100E4321F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3848C8FC2317CF9100E4321F /* Assets.xcassets */; };
 		3848C9002317CF9100E4321F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3848C8FE2317CF9100E4321F /* LaunchScreen.storyboard */; };
+		9FAE870123195BAE007B6501 /* Flights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAE870023195BAD007B6501 /* Flights.storyboard */; };
+		9FAE870323195CB3007B6501 /* FlightTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE870223195CB3007B6501 /* FlightTableViewController.swift */; };
+		9FAE870523195CE7007B6501 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE870423195CE7007B6501 /* FlightCell.swift */; };
 		F64062FC231932A300070B0E /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FB231932A300070B0E /* Flight.swift */; };
 		F64062FE2319339400070B0E /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FD2319339400070B0E /* Rocket.swift */; };
 		F64063002319346D00070B0E /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FF2319346D00070B0E /* Links.swift */; };
@@ -21,11 +22,12 @@
 /* Begin PBXFileReference section */
 		3848C8F22317CF8F00E4321F /* Spacedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spacedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3848C8F52317CF8F00E4321F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3848C8F72317CF8F00E4321F /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
-		3848C8FA2317CF8F00E4321F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launches.storyboard; sourceTree = "<group>"; };
 		3848C8FC2317CF9100E4321F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3848C8FF2317CF9100E4321F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3848C9012317CF9100E4321F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FAE870023195BAD007B6501 /* Flights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Flights.storyboard; sourceTree = "<group>"; };
+		9FAE870223195CB3007B6501 /* FlightTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewController.swift; sourceTree = "<group>"; };
+		9FAE870423195CE7007B6501 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlightCell.swift; path = Spacedia/View/FlightCell.swift; sourceTree = SOURCE_ROOT; };
 		F64062FB231932A300070B0E /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
 		F64062FD2319339400070B0E /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		F64062FF2319346D00070B0E /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 		9FAE86F62317DC06007B6501 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				3848C8F92317CF8F00E4321F /* Launches.storyboard */,
+				9FAE870023195BAD007B6501 /* Flights.storyboard */,
 				3848C8FE2317CF9100E4321F /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -102,6 +104,7 @@
 		9FAE86F72317DC0A007B6501 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9FAE870423195CE7007B6501 /* FlightCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,7 +112,7 @@
 		9FAE86F82317DC0D007B6501 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3848C8F72317CF8F00E4321F /* LaunchesViewController.swift */,
+				9FAE870223195CB3007B6501 /* FlightTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,7 +187,7 @@
 			files = (
 				3848C9002317CF9100E4321F /* LaunchScreen.storyboard in Resources */,
 				3848C8FD2317CF9100E4321F /* Assets.xcassets in Resources */,
-				3848C8FB2317CF8F00E4321F /* Launches.storyboard in Resources */,
+				9FAE870123195BAE007B6501 /* Flights.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +200,9 @@
 			files = (
 				F64063002319346D00070B0E /* Links.swift in Sources */,
 				F64062FC231932A300070B0E /* Flight.swift in Sources */,
-				3848C8F82317CF8F00E4321F /* LaunchesViewController.swift in Sources */,
+				9FAE870523195CE7007B6501 /* FlightCell.swift in Sources */,
 				F640630223193C6200070B0E /* NetworkingManager.swift in Sources */,
+				9FAE870323195CB3007B6501 /* FlightTableViewController.swift in Sources */,
 				3848C8F62317CF8F00E4321F /* AppDelegate.swift in Sources */,
 				F64062FE2319339400070B0E /* Rocket.swift in Sources */,
 			);
@@ -207,14 +211,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3848C8F92317CF8F00E4321F /* Launches.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3848C8FA2317CF8F00E4321F /* Base */,
-			);
-			name = Launches.storyboard;
-			sourceTree = "<group>";
-		};
 		3848C8FE2317CF9100E4321F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
