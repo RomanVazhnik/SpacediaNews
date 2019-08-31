@@ -10,7 +10,9 @@ import UIKit
 
 class NetworkManager {
     
-    static func fetchData(for url: String, complition: @escaping ([Flight]?) -> ()) {
+    static let shared = NetworkManager()
+    
+    func fetchData(for url: String, complition: @escaping ([Flight]?) -> ()) {
         
         guard let url = URL(string: url) else { return }
         
@@ -36,7 +38,7 @@ class NetworkManager {
         }.resume()
     }
     
-    static func fetchImage(for url: String, complition: @escaping (UIImage?)->()){
+    func fetchImage(for url: String, complition: @escaping (UIImage?)->()){
         
         guard let url = URL(string: url) else { return }
         
@@ -52,6 +54,21 @@ class NetworkManager {
                 complition(image)
             }
         }.resume()
+    }
+    
+    func checkImage(link: Links?) -> UIImage {
+        var finalImage = #imageLiteral(resourceName: "default")
+        guard let link = link, let url = link.missionPatch else {
+            return finalImage
+        }
+        
+        NetworkManager.shared.fetchImage(for: url) { image in
+            guard let imageData = image else {
+                return
+            }
+            finalImage = imageData
+        }
+        return finalImage
     }
     
 }

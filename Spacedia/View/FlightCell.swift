@@ -20,6 +20,7 @@ class FlightCell: UITableViewCell {
         flightNumber.text = "\(flight.flightNumber ?? 0)"
         missionName.text = flight.missionName ?? "Имя не найдено"
         flightDate.text = "\(flight.launchDateUnix ?? 0)"
-//        flightImage.image = #imageLiteral(resourceName: "default")
+        flightImage.image = NetworkManager.shared.checkImage(link: flight.links)
+        
     }
 }

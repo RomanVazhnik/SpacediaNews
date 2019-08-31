@@ -27,7 +27,7 @@ class LaunchesUIViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        NetworkManager.fetchData(for: "https://api.spacexdata.com/v3/launches/") { (flights) in
+        NetworkManager.shared.fetchData(for: "https://api.spacexdata.com/v3/launches/") { (flights) in
             if let flights = flights {
                 self.flights = flights
                 self.tableView.reloadData()
