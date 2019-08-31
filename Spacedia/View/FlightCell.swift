@@ -13,14 +13,18 @@ class FlightCell: UITableViewCell {
     @IBOutlet var flightNumber: UILabel!
     @IBOutlet var missionName: UILabel!
     @IBOutlet var flightDate: UILabel!
-    @IBOutlet var flightImage: UIImageView!
+    @IBOutlet var flightImage: ImageView!
     
     func configure(with flight: Flight) {
         
         flightNumber.text = "\(flight.flightNumber ?? 0)"
         missionName.text = flight.missionName ?? "Имя не найдено"
         flightDate.text = "\(flight.launchDateUnix ?? 0)"
-        flightImage.image = NetworkManager.shared.checkImage(link: flight.links)
+        guard let links = flight.links, let url = links.missionPatchSmall else {
+            flightImage.image = #imageLiteral(resourceName: "default")
+            return
+        }
+        flightImage.fetchImage(with: url)
         
     }
 }

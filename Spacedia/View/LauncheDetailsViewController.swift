@@ -10,7 +10,7 @@ import UIKit
 
 class LauncheDetailsViewController: UIViewController {
     
-    @IBOutlet var missionPatch: UIImageView!
+    @IBOutlet var missionPatch: ImageView!
     @IBOutlet var missionName: UILabel!
     @IBOutlet var missionDate: UILabel!
     
@@ -31,7 +31,11 @@ class LauncheDetailsViewController: UIViewController {
     }
     
     private func setupImages() {
-        missionPatch.image = NetworkManager.shared.checkImage(link: flight.links)
+        guard let links = flight.links, let url = links.missionPatchSmall else {
+            missionPatch.image = #imageLiteral(resourceName: "default")
+            return
+        }
+        missionPatch.fetchImage(with: url)
         //TODO найти картинку ракеты на случай если её нет в картинках
         rocketImage.image = UIImage(named: flight.rocket?.rocketName ?? "")
     }
