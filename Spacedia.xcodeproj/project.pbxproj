@@ -15,11 +15,11 @@
 		38566CA0231AD658005BEBF2 /* Launches.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38566C9E231AD657005BEBF2 /* Launches.storyboard */; };
 		9F655FFF23196663002C9270 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F655FFE23196663002C9270 /* ImageView.swift */; };
 		9FAE870323195CB3007B6501 /* LaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE870223195CB3007B6501 /* LaunchesViewController.swift */; };
-		9FAE870523195CE7007B6501 /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE870423195CE7007B6501 /* FlightCell.swift */; };
 		F64062FC231932A300070B0E /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FB231932A300070B0E /* Launch.swift */; };
 		F64062FE2319339400070B0E /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FD2319339400070B0E /* Rocket.swift */; };
 		F64063002319346D00070B0E /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64062FF2319346D00070B0E /* Links.swift */; };
 		F640630223193C6200070B0E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F640630123193C6200070B0E /* NetworkManager.swift */; };
+		F6660FE7231B07A200033B5D /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6660FE6231B07A200033B5D /* FlightCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +33,11 @@
 		38566C9E231AD657005BEBF2 /* Launches.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launches.storyboard; sourceTree = "<group>"; };
 		9F655FFE23196663002C9270 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		9FAE870223195CB3007B6501 /* LaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesViewController.swift; sourceTree = "<group>"; };
-		9FAE870423195CE7007B6501 /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlightCell.swift; path = Spacedia/Controller/FlightCell.swift; sourceTree = SOURCE_ROOT; };
 		F64062FB231932A300070B0E /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		F64062FD2319339400070B0E /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		F64062FF2319346D00070B0E /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		F640630123193C6200070B0E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F6660FE6231B07A200033B5D /* FlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlightCell.swift; path = Spacedia/View/FlightCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 		9FAE86F72317DC0A007B6501 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9FAE870423195CE7007B6501 /* FlightCell.swift */,
+				F6660FE6231B07A200033B5D /* FlightCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,10 +209,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F655FFF23196663002C9270 /* ImageView.swift in Sources */,
+				F6660FE7231B07A200033B5D /* FlightCell.swift in Sources */,
 				F64063002319346D00070B0E /* Links.swift in Sources */,
 				F64062FC231932A300070B0E /* Launch.swift in Sources */,
 				38566C9C231ACE9E005BEBF2 /* LaunchDetailsViewController.swift in Sources */,
-				9FAE870523195CE7007B6501 /* FlightCell.swift in Sources */,
 				F640630223193C6200070B0E /* NetworkManager.swift in Sources */,
 				9FAE870323195CB3007B6501 /* LaunchesViewController.swift in Sources */,
 				3848C8F62317CF8F00E4321F /* AppDelegate.swift in Sources */,
@@ -355,7 +355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UPE3S28QP6;
+				DEVELOPMENT_TEAM = RYT7ZAW62J;
 				INFOPLIST_FILE = "$(SRCROOT)/Spacedia/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,7 +373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UPE3S28QP6;
+				DEVELOPMENT_TEAM = RYT7ZAW62J;
 				INFOPLIST_FILE = "$(SRCROOT)/Spacedia/Supporting File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
