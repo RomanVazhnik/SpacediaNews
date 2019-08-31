@@ -12,7 +12,7 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchData(for url: String, complition: @escaping ([Flight]?) -> ()) {
+    func fetchData(for url: String, complition: @escaping ([Launch]?) -> ()) {
         
         guard let url = URL(string: url) else { return }
         
@@ -27,7 +27,7 @@ class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let flights = try decoder.decode([Flight].self, from: jsonData)
+                let flights = try decoder.decode([Launch].self, from: jsonData)
                 
                 DispatchQueue.main.async {
                     complition(flights)

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Flight: Codable {
+struct Launch: Codable {
     let flightNumber: Int?
     let missionName: String?
     let launchDateUnix: Int?
