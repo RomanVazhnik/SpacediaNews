@@ -203,6 +203,6 @@
     <resources>
         <image name="date" width="30" height="30"/>
         <image name="default" width="25" height="25"/>
-        <image name="icons8-летящая-ракета-90" width="90" height="90"/>
+        <image name="icons8-летящая-ракета-90" width="45" height="45"/>
     </resources>
 </document>
