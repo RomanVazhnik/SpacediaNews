@@ -20,7 +20,7 @@ class LaunchDetailViewController: UIViewController {
     
     @IBOutlet var details: UILabel!
     
-    var flight: Flight!
+    var flight: Launch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
