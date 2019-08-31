@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LauncheDetailsViewController: UIViewController {
+class LaunchDetailViewController: UIViewController {
     
     @IBOutlet var missionPatch: ImageView!
     @IBOutlet var missionName: UILabel!

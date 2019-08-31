@@ -8,8 +8,8 @@
 
 import UIKit
 
-class LaunchesUIViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class LaunchesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var filterDateView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewForHideFilterDateView: UIView!
@@ -26,13 +26,30 @@ class LaunchesUIViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         NetworkManager.shared.fetchData(for: "https://api.spacexdata.com/v3/launches/") { (flights) in
             if let flights = flights {
                 self.flights = flights
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return flights.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FlightCell", for: indexPath) as! FlightCell
+        
+        let flight = flights[indexPath.row]
+        cell.configure(with: flight)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
     
     @IBAction func hideFilterDateViewButton(_ sender: Any) {
@@ -56,5 +73,14 @@ class LaunchesUIViewController: UIViewController, UITableViewDelegate, UITableVi
             
         })
     }
-
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let detailVC = segue.destination as! LaunchDetailViewController
+            detailVC.flight = flights[indexPath.row]
+            detailVC.navigationItem.title = flights[indexPath.row].missionName
+        }
+    }
+    
 }
