@@ -38,6 +38,31 @@ class NetworkManager {
         }.resume()
     }
     
+    func getRoadster(for url: String, complition: @escaping (Roadster?) -> ()) {
+        guard let url = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            guard let jsonData = data else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let roadster = try decoder.decode(Roadster.self, from: jsonData)
+                
+                DispatchQueue.main.async {
+                    complition(roadster)
+                }
+            } catch let error {
+                print("error: ", error)
+            }
+            }.resume()
+    }
+    
     func fetchImage(for url: String, complition: @escaping (UIImage?)->()){
         
         guard let url = URL(string: url) else { return }

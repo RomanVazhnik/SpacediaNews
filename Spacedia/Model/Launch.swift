@@ -17,15 +17,7 @@ struct Launch: Codable {
     let details: String?
     
     func getDataInString() -> String {
-        if let resultDate = launchDateUnix {
-            let date = Date(timeIntervalSince1970: Double(resultDate))
-            let dateFormatter = DateFormatter()
-            dateFormatter.timeStyle = .medium
-            dateFormatter.dateStyle = .medium
-            dateFormatter.timeZone = .current
-            let result = dateFormatter.string(from: date)
-            return result
-        }
-        return "неизвестно"
+        let date = Date()
+        return date.getDataInStringFromUnix(date: launchDateUnix)
     }
 }
