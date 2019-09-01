@@ -124,8 +124,8 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func changeFromAndToLabelText(valueFrom: Float, valueTo: Float) {
-        fromDateCurrentLabel.text = "От: " + String(format: "%.0f", valueFrom) + " г."
-        toDateCurrentLabel.text = "До: " + String(format: "%.0f", valueTo) + " г."
+        fromDateCurrentLabel.text = "From: " + String(format: "%.0f", valueFrom) + " year"
+        toDateCurrentLabel.text = "To: " + String(format: "%.0f", valueTo) + " year"
     }
     
     func showAndHideFilterDateView() {

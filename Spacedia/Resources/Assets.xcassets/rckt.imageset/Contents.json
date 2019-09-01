@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-летящая-ракета-90.png",
+      "filename" : "rckt.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-летящая-ракета-91.png",
+      "filename" : "rckt-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-летящая-ракета-92.png",
+      "filename" : "rckt-2.png",
       "scale" : "3x"
     }
   ],

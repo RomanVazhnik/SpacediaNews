@@ -38,7 +38,6 @@ class LaunchDetailViewController: UIViewController {
         missionPatch.fetchImage(with: url)
         //TODO найти картинку ракеты на случай если её нет в картинках
         if let rocketName = flight.rocket?.rocketName {
-            print(rocketName)
             rocketImage.image = UIImage(named: rocketName)
             return
         }
@@ -48,8 +47,9 @@ class LaunchDetailViewController: UIViewController {
     private func setupLabels() {
         missionName.text = flight.missionName ?? "Не известно"
         missionDate.text = flight.getDataInString()
-        rocketName.text = flight.rocket?.rocketName
-        rocketType.text = flight.rocket?.rocketType
+        rocketName.text = "Name: \(flight.rocket?.rocketName ?? "Не известно")"
+        rocketType.text = "Type: \(flight.rocket?.rocketType ?? "Не известно")"
+        details.text = flight.details
     }
 
 }
