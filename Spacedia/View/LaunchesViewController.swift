@@ -84,8 +84,8 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func filterFromDateSliderTouchUpAction(_ sender: UISlider) {
-        let toDate = String(format: "%2.f", sliderToDate.value)
-        let newDate = String(format: "%2.f", sender.value)
+        let toDate = String(format: "%.0f", sliderToDate.value)
+        let newDate = String(format: "%.0f", sender.value)
         let newUrl = "\(url)?start=\(newDate)-01-01&end=\(toDate)-12-31"
         
         NetworkManager.shared.fetchData(for: newUrl) { (launch) in
@@ -99,8 +99,8 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBAction func filterToDateSliderTouchUpAction(_ sender: UISlider) {
-        let fromDate = String(format: "%2.f", sliderFromDate.value)
-        let newDate = String(format: "%2.f", sender.value)
+        let fromDate = String(format: "%.0f", sliderFromDate.value)
+        let newDate = String(format: "%.0f", sender.value)
         let newUrl = "\(url)?start=\(fromDate)-01-01&end=\(newDate)-12-31"
         
         NetworkManager.shared.fetchData(for: newUrl) { (launch) in
@@ -170,14 +170,16 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
     
     func showAndHideFilterDateView() {
         
+        let tabBarHeigth: CGFloat = 15
+        
         UIView.animate(withDuration: 0.3, animations: {
             if self.filterDateView.frame.origin.y == self.view.frame.height {
-                self.filterDateView.frame.origin.y -= self.filterDateView.frame.height + self.bottomSafeArea
+                self.filterDateView.frame.origin.y -= self.filterDateView.frame.height + self.bottomSafeArea + tabBarHeigth
                 
                 self.viewForHideFilterDateView.isHidden = !(self.viewForHideFilterDateView.isHidden)
                 self.viewForHideFilterDateView.alpha = self.viewForHideFilterDateView.alpha == 0 ? 0.5 : 0
             } else {
-                self.filterDateView.frame.origin.y += self.filterDateView.frame.height + self.bottomSafeArea
+                self.filterDateView.frame.origin.y += self.filterDateView.frame.height + self.bottomSafeArea + tabBarHeigth
                 
                 self.viewForHideFilterDateView.isHidden = !(self.viewForHideFilterDateView.isHidden)
                 self.viewForHideFilterDateView.alpha = self.viewForHideFilterDateView.alpha == 0 ? 0.5 : 0

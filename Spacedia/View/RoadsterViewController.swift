@@ -46,10 +46,10 @@ class RoadsterViewController: UIViewController {
         nameLabel.text = roadster.name
         dateLabel.text = roadster.getDataInString()
         launchMass.text = String(roadster.launchMassKg)
-        periodDay.text = String(format: "%0.2f", roadster.periodDays)
-        speed.text = String(format: "%0.2f", roadster.speedKph)
-        earthDistance.text = String(format: "%0.2f", roadster.earthDistanceKm)
-        marsDistance.text = String(format: "%0.2f", roadster.marsDistanceKm)
+        periodDay.text = String(format: "%.0f", roadster.periodDays)
+        speed.text = String(format: "%.0f", roadster.speedKph)
+        earthDistance.text = String(format: "%.0f", roadster.earthDistanceKm)
+        marsDistance.text = String(format: "%.0f", roadster.marsDistanceKm)
         detailLabel.text = roadster?.details
         wikiUrl.text = roadster?.wikipedia
     }
