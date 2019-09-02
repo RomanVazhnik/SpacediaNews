@@ -63,37 +63,4 @@ class NetworkManager {
             }.resume()
     }
     
-    func fetchImage(for url: String, complition: @escaping (UIImage?)->()){
-        
-        guard let url = URL(string: url) else { return }
-        
-        URLSession.shared.dataTask(with: url) { (data, respons, error) in
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            guard let data = data, let image = UIImage(data: data) else { return }
-            
-            DispatchQueue.main.async {
-                complition(image)
-            }
-        }.resume()
-    }
-    
-    func checkImage(link: Links?) -> UIImage {
-        var finalImage = #imageLiteral(resourceName: "default")
-        guard let link = link, let url = link.missionPatch else {
-            return finalImage
-        }
-        
-        NetworkManager.shared.fetchImage(for: url) { image in
-            guard let imageData = image else {
-                return
-            }
-            finalImage = imageData
-        }
-        return finalImage
-    }
-    
 }
