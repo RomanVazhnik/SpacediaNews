@@ -131,6 +131,7 @@
                                         <color key="minimumTrackTintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="filterFromDateSliderAction:" destination="1tu-aY-g5X" eventType="valueChanged" id="e3c-gF-hdj"/>
+                                            <action selector="filterFromDateSliderTouchUpAction:" destination="1tu-aY-g5X" eventType="touchUpInside" id="az7-sJ-TVb"/>
                                         </connections>
                                     </slider>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NDQ-eo-jXg">
@@ -139,6 +140,7 @@
                                         <color key="minimumTrackTintColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="filterToDateSliderAction:" destination="1tu-aY-g5X" eventType="valueChanged" id="Feg-xW-8cz"/>
+                                            <action selector="filterToDateSliderTouchUpAction:" destination="1tu-aY-g5X" eventType="touchUpInside" id="t54-VT-LXj"/>
                                         </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="from: 2000 year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsT-ZE-Hd1">
