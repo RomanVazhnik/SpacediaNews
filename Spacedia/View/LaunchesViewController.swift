@@ -28,6 +28,11 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
     
     var launches: [Launch] = []
     
+    var minDateJson = ""
+    var maxDateJson = ""
+    
+    let url = "https://api.spacexdata.com/v3/launches/"
+    
     var bottomSafeArea: CGFloat {
         if #available(iOS 11.0, *) {
             return self.view.safeAreaInsets.bottom
@@ -39,7 +44,7 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager.shared.fetchData(for: "https://api.spacexdata.com/v3/launches/") { (launch) in
+        NetworkManager.shared.fetchData(for: url) { (launch) in
             if let launches = launch {
                 self.launches = launches
                 self.setDateForDateFilter()
@@ -76,7 +81,35 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
         if sliderFromDate.value >= sliderToDate.value {
             sliderToDate.value = sliderFromDate.value
         }
+    }
+    
+    @IBAction func filterFromDateSliderTouchUpAction(_ sender: UISlider) {
+        let toDate = String(format: "%2.f", sliderToDate.value)
+        let newDate = String(format: "%2.f", sender.value)
+        let newUrl = "\(url)?start=\(newDate)-01-01&end=\(toDate)-12-31"
         
+        NetworkManager.shared.fetchData(for: newUrl) { (launch) in
+            if let launches = launch {
+                self.launches = launches
+                
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
+    @IBAction func filterToDateSliderTouchUpAction(_ sender: UISlider) {
+        let fromDate = String(format: "%2.f", sliderFromDate.value)
+        let newDate = String(format: "%2.f", sender.value)
+        let newUrl = "\(url)?start=\(fromDate)-01-01&end=\(newDate)-12-31"
+        
+        NetworkManager.shared.fetchData(for: newUrl) { (launch) in
+            if let launches = launch {
+                self.launches = launches
+                
+                self.tableView.reloadData()
+            }
+        }
     }
     
     @IBAction func filterToDateSliderAction(_ sender: UISlider) {
@@ -88,7 +121,11 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
-    private func dateFilter() {
+    
+    private func dateFilter(fromDate: Float, toDate: Float) {
+        
+        
+        
         
     }
     
@@ -120,6 +157,9 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
             sliderToDate.value = Float(formatter.string(from: lastDate))!
             
             changeFromAndToLabelText(valueFrom: sliderFromDate.value, valueTo: sliderToDate.value)
+            
+            minDateJson = formatter.string(from: firstDate)
+            maxDateJson = formatter.string(from: lastDate)
         }
     }
     
