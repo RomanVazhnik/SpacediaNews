@@ -480,6 +480,9 @@
                                     <constraint firstAttribute="width" constant="354" id="W55-bo-qsN"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="46j-eh-uIy">
+                                <rect key="frame" x="197" y="200" width="20" height="20"/>
+                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qjy-A7-R3U">
                                 <rect key="frame" x="25" y="308" width="364" height="173"/>
                                 <subviews>
@@ -607,6 +610,8 @@
                             <constraint firstItem="Qjy-A7-R3U" firstAttribute="leading" secondItem="beB-7e-fMO" secondAttribute="leading" constant="25" id="Xty-mI-2Jw"/>
                             <constraint firstItem="8md-Tt-6FT" firstAttribute="top" secondItem="beB-7e-fMO" secondAttribute="top" constant="10" id="YVL-ig-Wkf"/>
                             <constraint firstItem="eX3-aa-Ec7" firstAttribute="leading" secondItem="beB-7e-fMO" secondAttribute="leading" constant="25" id="hoB-s4-QEN"/>
+                            <constraint firstItem="46j-eh-uIy" firstAttribute="centerY" secondItem="g8J-iI-6vh" secondAttribute="centerY" id="j29-L4-phd"/>
+                            <constraint firstItem="46j-eh-uIy" firstAttribute="centerX" secondItem="g8J-iI-6vh" secondAttribute="centerX" id="lYf-DX-Pfg"/>
                             <constraint firstItem="8md-Tt-6FT" firstAttribute="leading" secondItem="beB-7e-fMO" secondAttribute="leading" constant="10" id="o8i-q6-NSe"/>
                             <constraint firstItem="beB-7e-fMO" firstAttribute="trailing" secondItem="eX3-aa-Ec7" secondAttribute="trailing" constant="25" id="rRQ-4i-hhX"/>
                             <constraint firstItem="beB-7e-fMO" firstAttribute="trailing" secondItem="8DK-0Q-fyZ" secondAttribute="trailing" constant="25" id="rf1-mj-LqA"/>
@@ -624,6 +629,7 @@
                         <outlet property="dateLabel" destination="y7x-ZR-HFN" id="5oe-j0-JG5"/>
                         <outlet property="detailLabel" destination="8DK-0Q-fyZ" id="QR2-KO-Kpc"/>
                         <outlet property="earthDistance" destination="Q2N-tV-sMe" id="xiS-we-g3M"/>
+                        <outlet property="imageActivityIndicator" destination="46j-eh-uIy" id="yGw-A8-Wol"/>
                         <outlet property="imageRoadsterOne" destination="g8J-iI-6vh" id="icd-NJ-60G"/>
                         <outlet property="launchMass" destination="M39-cv-zMa" id="R9W-vJ-fyi"/>
                         <outlet property="marsDistance" destination="FWP-nT-a3Y" id="UvC-0P-4Bm"/>

@@ -10,6 +10,8 @@ import UIKit
 
 class RoadsterViewController: UIViewController {
     
+    @IBOutlet var imageActivityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
@@ -31,6 +33,9 @@ class RoadsterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageActivityIndicator.startAnimating()
+        imageActivityIndicator.hidesWhenStopped = true
         
         NetworkManager.shared.getRoadster(for: "https://api.spacexdata.com/v3/roadster") { (roadster) in
             if let roadster = roadster {
@@ -57,6 +62,7 @@ class RoadsterViewController: UIViewController {
     private func setupImages() {
         if let imageURL = roadster?.flickrImages[0] {
             imageRoadsterOne.fetchImage(with: imageURL)
+            self.imageActivityIndicator.stopAnimating()
         }
     }
     
