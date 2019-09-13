@@ -22,6 +22,8 @@
 		F6660FE7231B07A200033B5D /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6660FE6231B07A200033B5D /* FlightCell.swift */; };
 		F6660FEB231B107B00033B5D /* RoadsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6660FEA231B107B00033B5D /* RoadsterViewController.swift */; };
 		F6660FED231B131300033B5D /* Roadster.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6660FEC231B131300033B5D /* Roadster.swift */; };
+		F6CBB661232C03F800CE0313 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CBB660232C03F800CE0313 /* WebViewController.swift */; };
+		F6CBB664232C0AAA00CE0313 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6CBB663232C0AAA00CE0313 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		F6660FE6231B07A200033B5D /* FlightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlightCell.swift; path = Spacedia/View/FlightCell.swift; sourceTree = SOURCE_ROOT; };
 		F6660FEA231B107B00033B5D /* RoadsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadsterViewController.swift; sourceTree = "<group>"; };
 		F6660FEC231B131300033B5D /* Roadster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roadster.swift; sourceTree = "<group>"; };
+		F6CBB660232C03F800CE0313 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F6CBB663232C0AAA00CE0313 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CBB664232C0AAA00CE0313 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +65,7 @@
 			children = (
 				3848C8F42317CF8F00E4321F /* Spacedia */,
 				3848C8F32317CF8F00E4321F /* Products */,
+				F6CBB662232C0AAA00CE0313 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +133,7 @@
 				9FAE870223195CB3007B6501 /* LaunchesViewController.swift */,
 				38566C9B231ACE9E005BEBF2 /* LaunchDetailsViewController.swift */,
 				F6660FEA231B107B00033B5D /* RoadsterViewController.swift */,
+				F6CBB660232C03F800CE0313 /* WebViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +147,14 @@
 				F6660FEC231B131300033B5D /* Roadster.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F6CBB662232C0AAA00CE0313 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6CBB663232C0AAA00CE0313 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +239,7 @@
 				9FAE870323195CB3007B6501 /* LaunchesViewController.swift in Sources */,
 				F641318B231BBE4C00ED25F5 /* Extension+Date.swift in Sources */,
 				3848C8F62317CF8F00E4321F /* AppDelegate.swift in Sources */,
+				F6CBB661232C03F800CE0313 /* WebViewController.swift in Sources */,
 				F64062FE2319339400070B0E /* Rocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

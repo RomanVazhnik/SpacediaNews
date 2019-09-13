@@ -30,6 +30,12 @@ class LaunchDetailViewController: UIViewController {
         
     }
     
+    @IBAction func wikiButtonPressed() {
+        if let wikiLink = flight.links?.wikipedia, let url = URL(string: wikiLink) {
+            performSegue(withIdentifier: "segueToWebView", sender: url)
+        }
+    }
+    
     private func setupImages() {
         guard let links = flight.links, let url = links.missionPatchSmall else {
             missionPatch.image = #imageLiteral(resourceName: "default")
@@ -50,6 +56,13 @@ class LaunchDetailViewController: UIViewController {
         rocketName.text = "Name: \(flight.rocket?.rocketName ?? "Не известно")"
         rocketType.text = "Type: \(flight.rocket?.rocketType ?? "Не известно")"
         details.text = flight.details
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let url = sender as? URL {
+            let vc = segue.destination as! WebViewController
+            vc.url = url
+        }
     }
 
 }

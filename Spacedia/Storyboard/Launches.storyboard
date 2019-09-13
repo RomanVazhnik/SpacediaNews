@@ -335,6 +335,9 @@
                                                 <state key="normal" image="Wiki">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="wikiButtonPressed" destination="NnH-R7-CoP" eventType="touchUpInside" id="fKC-zm-sm2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -442,11 +445,46 @@
                         <outlet property="rocketImage" destination="lOt-uo-L4o" id="9D7-2V-iYK"/>
                         <outlet property="rocketName" destination="F87-Gi-Ezq" id="7P0-M0-fQQ"/>
                         <outlet property="rocketType" destination="IBZ-dt-RTZ" id="tm8-I2-uyG"/>
+                        <segue destination="51Q-lA-uyJ" kind="show" identifier="segueToWebView" id="97h-cs-hAC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bO-YL-5uW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4576.811594202899" y="-379.01785714285711"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="4YR-v0-6a2">
+            <objects>
+                <viewController id="51Q-lA-uyJ" customClass="WebViewController" customModule="Spacedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hYe-BS-BV5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvX-eY-yLB">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gvX-eY-yLB" firstAttribute="top" secondItem="tqE-ph-fJO" secondAttribute="top" id="2JH-MF-eA2"/>
+                            <constraint firstItem="gvX-eY-yLB" firstAttribute="bottom" secondItem="tqE-ph-fJO" secondAttribute="bottom" id="5Rk-rv-2Ee"/>
+                            <constraint firstItem="gvX-eY-yLB" firstAttribute="leading" secondItem="tqE-ph-fJO" secondAttribute="leading" id="ASq-7a-jOc"/>
+                            <constraint firstItem="gvX-eY-yLB" firstAttribute="trailing" secondItem="tqE-ph-fJO" secondAttribute="trailing" id="oew-er-5dD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tqE-ph-fJO"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="gvX-eY-yLB" id="gCn-pl-Bp7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezW-K2-kNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5412" y="-379"/>
         </scene>
         <!--Roadster View Controller-->
         <scene sceneID="tT4-zd-60q">
