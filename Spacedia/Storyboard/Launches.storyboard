@@ -104,6 +104,9 @@
                                     <outlet property="delegate" destination="1tu-aY-g5X" id="x0b-Np-VGr"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tWH-5i-aJG">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                             <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J1-xb-xxW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
@@ -209,6 +212,8 @@
                             <constraint firstItem="5J1-xb-xxW" firstAttribute="leading" secondItem="YMt-6V-bjp" secondAttribute="leading" id="6OO-93-z8Y"/>
                             <constraint firstItem="5J1-xb-xxW" firstAttribute="top" secondItem="N88-un-HNJ" secondAttribute="top" id="JIz-N7-5xY"/>
                             <constraint firstItem="YMt-6V-bjp" firstAttribute="trailing" secondItem="wfa-OD-BGh" secondAttribute="trailing" id="RZZ-Md-zE2"/>
+                            <constraint firstItem="tWH-5i-aJG" firstAttribute="centerX" secondItem="N88-un-HNJ" secondAttribute="centerX" id="UNK-dR-rZr"/>
+                            <constraint firstItem="tWH-5i-aJG" firstAttribute="centerY" secondItem="N88-un-HNJ" secondAttribute="centerY" id="Z0i-hV-BoA"/>
                             <constraint firstItem="YMt-6V-bjp" firstAttribute="trailing" secondItem="3iK-EM-wPX" secondAttribute="trailing" constant="10" id="ZKz-To-hDY"/>
                             <constraint firstItem="3iK-EM-wPX" firstAttribute="leading" secondItem="YMt-6V-bjp" secondAttribute="leading" constant="10" id="cLD-VU-D0v"/>
                             <constraint firstItem="5J1-xb-xxW" firstAttribute="trailing" secondItem="N88-un-HNJ" secondAttribute="trailing" id="iCV-qg-iFq"/>
@@ -243,6 +248,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="tWH-5i-aJG" id="fYL-nZ-YQk"/>
                         <outlet property="filterDateView" destination="3iK-EM-wPX" id="b0L-Ax-oIF"/>
                         <outlet property="fromDateCurrentLabel" destination="tsT-ZE-Hd1" id="Myz-lp-vt6"/>
                         <outlet property="fromDateLeftDownLabel" destination="dui-Gi-SZx" id="GLm-In-QO9"/>

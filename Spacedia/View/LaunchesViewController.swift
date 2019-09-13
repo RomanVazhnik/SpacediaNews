@@ -10,6 +10,8 @@ import UIKit
 
 class LaunchesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var filterDateView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var viewForHideFilterDateView: UIView!
@@ -44,10 +46,14 @@ class LaunchesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        
         NetworkManager.shared.fetchData(for: url) { (launch) in
             if let launches = launch {
                 self.launches = launches
                 self.setDateForDateFilter()
+                self.activityIndicator.stopAnimating()
                 self.tableView.reloadData()
             }
         }
