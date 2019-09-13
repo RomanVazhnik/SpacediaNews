@@ -22,12 +22,8 @@ class RoadsterViewController: UIViewController {
     @IBOutlet var marsDistance: UILabel!
     
     @IBOutlet var imageRoadsterOne: ImageView!
-    @IBOutlet var imageRoadsterTwo: ImageView!
-    @IBOutlet var imageRoadsterThree: ImageView!
-    @IBOutlet var imageRoadsterFour: ImageView!
 
     @IBOutlet var detailLabel: UILabel!
-    @IBOutlet var wikiUrl: UILabel!
     
     var roadster: Roadster!
     
@@ -56,7 +52,6 @@ class RoadsterViewController: UIViewController {
         earthDistance.text = String(format: "%.0f", roadster.earthDistanceKm)
         marsDistance.text = String(format: "%.0f", roadster.marsDistanceKm)
         detailLabel.text = roadster?.details
-        wikiUrl.text = roadster?.wikipedia
     }
     
     private func setupImages() {
